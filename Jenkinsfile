@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'buddhanaveen', url: 'https://github.com/Naveen176/spring-boot-pipeline-build-test.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'jenkins.github', url: 'https://github.com/Naveen176/spring-boot-pipeline-build-test.git']]])
             }
         }
         
